@@ -35,6 +35,8 @@ The desktop app saves an **automatic encrypted backup** after every change (in *
 
 ### Use the team vault
 
+> ⏳ *Coming soon: requires cloud sync, which isn't enabled yet. Meanwhile, share data with “Export encrypted backup” → “Restore from a backup”.*
+
 To share the same information across several computers, on each one:
 1. Open Bóveda and choose **“I already use Bóveda on another device”**.
 2. Enter the team vault's **email** and **master password**.
@@ -68,6 +70,8 @@ La app de escritorio guarda una **copia cifrada automática** después de cada c
 - **PC nueva o formateada:** instala Bóveda y elige **«Restaurar desde una copia»**. Selecciona tu archivo de copia y escribe la contraseña maestra. 👉 Consejo: pon la carpeta de copias en **Google Drive, OneDrive, Dropbox o iCloud** para que la copia sobreviva a un formateo y esté lista en tu PC nueva.
 
 ### Usar la bóveda del equipo
+
+> ⏳ *Próximamente: requiere la sincronización en la nube, que aún no está activada. Mientras tanto, comparte datos con «Exportar copia cifrada» → «Restaurar desde una copia».*
 
 Para compartir la misma información en varios equipos, en cada computadora:
 1. Abre Bóveda y elige **«Ya uso Bóveda en otro dispositivo»**.
