@@ -26,6 +26,13 @@ Once installed, **Bóveda updates itself**: when a new version is out you'll see
 1. Open `Boveda-macOS.dmg` and drag **Boveda** into **Applications**.
 2. The first time, if macOS says it can't verify the developer: **System Settings → Privacy & Security → “Open Anyway”**.
 
+### Reinstalling or switching computers
+
+The desktop app saves an **automatic encrypted backup** after every change (in *Documents/Boveda*, or in the folder you pick in *Settings → Automatic backup*).
+
+- **Uninstall and reinstall on the same computer:** your passwords stay (unless you tick “Delete the application data” when uninstalling on Windows). Just unlock with your master password.
+- **New or reformatted computer:** install Bóveda and choose **“Restore from a backup”**. Pick your backup file and enter the master password. 👉 Tip: set the backup folder to **Google Drive, OneDrive, Dropbox or iCloud** so the backup survives a reformat and is ready on your new computer.
+
 ### Use the team vault
 
 To share the same information across several computers, on each one:
@@ -52,6 +59,13 @@ Una vez instalada, **Bóveda se actualiza sola**: cuando hay una versión nueva 
 **macOS**
 1. Abre `Boveda-macOS.dmg` y arrastra **Boveda** a **Aplicaciones**.
 2. La primera vez, si macOS dice que no puede verificar al desarrollador: **Ajustes del Sistema → Privacidad y seguridad → «Abrir igualmente»**.
+
+### Reinstalar o cambiar de computadora
+
+La app de escritorio guarda una **copia cifrada automática** después de cada cambio (en *Documentos/Boveda*, o en la carpeta que elijas en *Ajustes → Copia automática*).
+
+- **Desinstalar y volver a instalar en la misma PC:** tus contraseñas se conservan (salvo que en Windows marques «Eliminar los datos de aplicación» al desinstalar). Solo desbloquea con tu contraseña maestra.
+- **PC nueva o formateada:** instala Bóveda y elige **«Restaurar desde una copia»**. Selecciona tu archivo de copia y escribe la contraseña maestra. 👉 Consejo: pon la carpeta de copias en **Google Drive, OneDrive, Dropbox o iCloud** para que la copia sobreviva a un formateo y esté lista en tu PC nueva.
 
 ### Usar la bóveda del equipo
 
