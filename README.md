@@ -2,9 +2,9 @@
 
 **[English](#english) · [Español](#español)**
 
-| | Windows 10/11 (64-bit) | macOS 11+ (Apple Silicon & Intel) |
-|---|---|---|
-| ⬇️ | [**Boveda-Windows-x64-Setup.exe**](https://github.com/morghullis/boveda-releases/releases/latest/download/Boveda-Windows-x64-Setup.exe) | [**Boveda-macOS.dmg**](https://github.com/morghullis/boveda-releases/releases/latest/download/Boveda-macOS.dmg) |
+| | Windows 10/11 (64-bit) | macOS 11+ (Apple Silicon & Intel) | Android 7+ |
+|---|---|---|---|
+| ⬇️ | [**Boveda-Windows-x64-Setup.exe**](https://github.com/morghullis/boveda-releases/releases/latest/download/Boveda-Windows-x64-Setup.exe) | [**Boveda-macOS.dmg**](https://github.com/morghullis/boveda-releases/releases/latest/download/Boveda-macOS.dmg) | [**Boveda-Android.apk**](https://github.com/morghullis/boveda-releases/releases/latest/download/Boveda-Android.apk) |
 
 These links always point to the **latest version** · Estos enlaces siempre apuntan a la **última versión** · [All releases / Todas las versiones](https://github.com/morghullis/boveda-releases/releases)
 
@@ -25,6 +25,11 @@ Once installed, **Bóveda updates itself**: when a new version is out you'll see
 **macOS**
 1. Open `Boveda-macOS.dmg` and drag **Boveda** into **Applications**.
 2. The first time, if macOS says it can't verify the developer: **System Settings → Privacy & Security → “Open Anyway”**.
+
+**Android**
+1. Open `Boveda-Android.apk` on your phone. Android will ask you to allow installing apps from your browser or file manager: allow it for that app only.
+2. This version doesn't update itself: to update, download and open the new APK (your data stays). Coming soon to Google Play.
+3. Before switching to the Google Play version, export an encrypted backup and uninstall this one: Google signs the Play version with a different key.
 
 ### Reinstalling or switching computers
 
@@ -67,6 +72,11 @@ Una vez instalada, **Bóveda se actualiza sola**: cuando hay una versión nueva 
 **macOS**
 1. Abre `Boveda-macOS.dmg` y arrastra **Boveda** a **Aplicaciones**.
 2. La primera vez, si macOS dice que no puede verificar al desarrollador: **Ajustes del Sistema → Privacidad y seguridad → «Abrir igualmente»**.
+
+**Android**
+1. Abre `Boveda-Android.apk` en tu teléfono. Android te pedirá permitir instalar apps desde tu navegador o gestor de archivos: permítelo solo para esa app.
+2. Esta versión no se actualiza sola: para actualizar, descarga y abre el APK nuevo (tus datos se conservan). Muy pronto en Google Play.
+3. Antes de pasarte a la versión de Google Play, exporta una copia cifrada y desinstala esta: Google firma la de la tienda con otra llave.
 
 ### Reinstalar o cambiar de computadora
 
