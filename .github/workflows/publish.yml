@@ -1,0 +1,85 @@
+# Workflow del repositorio PÚBLICO morghullis/boveda-releases.
+#
+# Vive aquí (repo privado) como fuente de verdad: release.yml lo copia en cada
+# envío a la rama `incoming` junto con los instaladores. GitHub ejecuta el
+# workflow que contiene el commit enviado, por eso viaja con él.
+#
+# Las firmas ya se verifican en el CI privado antes de enviar; aquí se vuelven a
+# verificar y se impide publicar una versión igual o más antigua que la actual.
+name: Publicar versión
+
+on:
+  push:
+    branches: [incoming]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Exactamente el commit que disparó el workflow (no lo que haya en la rama después).
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Verificar firmas
+        run: |
+          set -euo pipefail
+          sudo apt-get install -y -qq minisign > /dev/null
+          base64 -d < updater.pub.b64 > key.pub
+          for file in Boveda-Windows-x64-Setup.exe Boveda-macOS.app.tar.gz; do
+            base64 -d < "$file.sig" > "$file.minisig"
+            minisign -Vm "$file" -x "$file.minisig" -p key.pub
+            # latest.json debe llevar exactamente la misma firma.
+            jq -e --arg sig "$(cat "$file.sig")" '[.platforms[].signature] | index($sig) != null' latest.json > /dev/null
+          done
+          rm -f key.pub ./*.minisig
+          # El APK de Android: todas sus huellas de certificado (una por esquema de
+          # firma) deben ser exactamente la de la llave de subida del autor.
+          build_tools=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n1)
+          digests=$("$build_tools/apksigner" verify --print-certs Boveda-Android.apk \
+            | sed -nE 's/.*certificate SHA-256 digest: ([0-9a-f]{64})$/\1/p' | sort -u)
+          [ -n "$digests" ]
+          [ "$digests" = "b81c40ab6fda3a5feeb65cdc7a1d43e4cd23c5ff2372cd001f97559c241eaa5e" ]
+
+      - name: Crear la versión
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          VERSION="$(jq -r .version latest.json)"
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Versión inválida en latest.json" >&2
+            exit 1
+          fi
+          TAG="v$VERSION"
+
+          # Nunca publicar una versión igual o anterior a la última (evita "downgrades").
+          CURRENT="$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName --jq .tagName 2>/dev/null || true)"
+          if [[ -n "$CURRENT" ]]; then
+            HIGHEST="$(printf '%s\n%s\n' "${CURRENT#v}" "$VERSION" | sort -V | tail -n1)"
+            if [[ "$HIGHEST" != "$VERSION" || "${CURRENT#v}" == "$VERSION" ]]; then
+              echo "La versión $VERSION no es mayor que la publicada ($CURRENT)" >&2
+              exit 1
+            fi
+          fi
+
+          # La etiqueta apunta a main (sin binarios); los archivos subidos son los del
+          # commit exacto que disparó el workflow. Borrador primero y publicar al final:
+          # el actualizador nunca ve una versión a medio subir.
+          gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target main --draft \
+            --title "Bóveda $VERSION" --notes-file NOTES.md \
+            Boveda-Windows-x64-Setup.exe Boveda-Windows-x64-Setup.exe.sig \
+            Boveda-macOS.dmg Boveda-macOS.app.tar.gz Boveda-macOS.app.tar.gz.sig \
+            Boveda-Android.apk latest.json
+          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+          echo "Publicada $TAG (commit de artefactos $TARGET_SHA)"

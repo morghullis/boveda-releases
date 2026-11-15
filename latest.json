@@ -1,0 +1,19 @@
+{
+  "version": "0.9.0",
+  "notes": "Bóveda 0.9.0",
+  "pub_date": "2026-11-15T22:58:43.539Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTelNZNEkwdXNudVE5akRqTkNrdDMvQkVZcjVUOWFBMWMzalVNQUNObTBZcmxCZHhZWkhNTElkOWRvNjYxUEtCUkVPdDZCZWpsSVd5UzlqbjBVaXExWUg1M0JzbjNWMlE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgzNDM1CWZpbGU6Qm92ZWRhXzAuOS4wX3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjkuMApSOEFYWVdPTStSa2k4ZjlHSkUzU1lQZUlXd0YzRHoxTHo0SmFONkxBQWJXbkh6VUQza1FMcGV5bnRNdzZ0eW9aM2UzZzk5aHhLZTMrL2pNNExoUGxEdz09Cg==",
+      "url": "https://github.com/morghullis/boveda-releases/releases/download/v0.9.0/Boveda-Windows-x64-Setup.exe"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTelNZNEkwdXNudVFqYUhHQ2F5ek1taVNpbCs2anRJbVpJUSsvRVlrVDlVY3pGRzVBS2dOaHNrYjBZL2JjMmtzd2pZTFBVaXdDY1dUWTdMTlBRRUQ3UTRXWmhqTmFVcXdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgzMTQ1CWZpbGU6Qm92ZWRhLmFwcC50YXIuZ3oJdmVyc2lvbjowLjkuMApmdERWdnBvaE1lb1dUVFpwcmtmcEtVWXhBQXF6V05oejNoNHFrSDY4ajJiQ0w5Vmx5NlJMNWV6b3VTdnlTOEk2KzZpNEVLYktLTlM3REF4V0syQWpEQT09Cg==",
+      "url": "https://github.com/morghullis/boveda-releases/releases/download/v0.9.0/Boveda-macOS.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTelNZNEkwdXNudVFqYUhHQ2F5ek1taVNpbCs2anRJbVpJUSsvRVlrVDlVY3pGRzVBS2dOaHNrYjBZL2JjMmtzd2pZTFBVaXdDY1dUWTdMTlBRRUQ3UTRXWmhqTmFVcXdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgzMTQ1CWZpbGU6Qm92ZWRhLmFwcC50YXIuZ3oJdmVyc2lvbjowLjkuMApmdERWdnBvaE1lb1dUVFpwcmtmcEtVWXhBQXF6V05oejNoNHFrSDY4ajJiQ0w5Vmx5NlJMNWV6b3VTdnlTOEk2KzZpNEVLYktLTlM3REF4V0syQWpEQT09Cg==",
+      "url": "https://github.com/morghullis/boveda-releases/releases/download/v0.9.0/Boveda-macOS.app.tar.gz"
+    }
+  }
+}
