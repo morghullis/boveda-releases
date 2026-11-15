@@ -44,6 +44,12 @@ To share the same information across several computers, on each one:
 
 > The master password never leaves your computer: the server only stores encrypted data it cannot read.
 
+### Legal
+
+- [Privacy Policy](PRIVACY.md)
+- [Terms of Use](TERMS.md)
+- Support: [open an issue](https://github.com/morghullis/boveda-releases/issues)
+
 ---
 
 ## Español
@@ -79,3 +85,9 @@ Para compartir la misma información en varios equipos, en cada computadora:
 3. Listo: los cambios se sincronizan automáticamente, cifrados, entre todos.
 
 > La contraseña maestra nunca sale de tu equipo: el servidor solo guarda datos cifrados que no puede leer.
+
+### Legal
+
+- [Política de privacidad](PRIVACY.md)
+- [Términos de uso](TERMS.md)
+- Soporte: [abre una incidencia](https://github.com/morghullis/boveda-releases/issues)
