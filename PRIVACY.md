@@ -25,6 +25,7 @@ Bóveda es un gestor de contraseñas y secretos con cifrado de extremo a extremo
 - **Sincronización en la nube (opcional, cuando esté disponible):** si la activas, se guardan en nuestro servidor tu correo electrónico (para la cuenta) y tus entradas **ya cifradas**. El servidor no puede descifrarlas.
 - **Enlaces:** al abrir la web de una entrada, se abre en tu navegador.
 - **Logotipos de servicios:** van incluidos en la app; nunca se descargan, así que nadie puede saber qué cuentas tienes.
+- **Compartir:** el paquete cifrado lo envías tú por el canal que elijas (correo, chat, archivo) y el código por otro. No pasa por nuestros servidores y sin el código es ilegible.
 
 ### Permisos en Android
 
@@ -72,6 +73,7 @@ Bóveda is an end-to-end encrypted password and secrets manager developed by Ped
 - **Cloud sync (optional, when available):** if you turn it on, our server stores your email address (for the account) and your **already encrypted** entries. The server cannot decrypt them.
 - **Links:** opening an entry's website opens it in your browser.
 - **Service logos:** they ship inside the app and are never downloaded, so no one can tell which accounts you have.
+- **Sharing:** you send the encrypted package through the channel you choose (email, chat, file) and the code through another. It never goes through our servers and is unreadable without the code.
 
 ### Android permissions
 
